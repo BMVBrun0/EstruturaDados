@@ -1,0 +1,23 @@
+createGraph(nodeCount): esta função recebe o número de nós do grafo como parâmetro. Ela cria uma tabela HTML que representa o grafo, com nodeCount linhas e colunas. 
+Cada célula contém um campo de entrada numérico (<input type="number">) onde o usuário pode digitar o peso da aresta. A tabela é adicionada ao elemento 
+com o ID graph-container, que é limpo antes de adicionar o novo grafo.
+
+addDelivery(destination, item): esta função recebe o destino e o item da entrega como parâmetros. Ela adiciona uma nova linha à tabela HTML com o ID deliveries-table, 
+exibindo o destino e o item da entrega. Além disso, a entrega é armazenada no array deliveries para uso posterior.
+
+calculatePaths(): esta função calcula os caminhos do grafo. Ela obtém os valores dos campos de entrada do grafo criado anteriormente e os exibe em uma nova tabela HTML, 
+onde cada célula contém um campo de entrada de texto (<input type="text">) com os valores correspondentes. A tabela é adicionada ao elemento com o ID path-container, 
+que é limpo antes de adicionar a nova tabela de caminhos.
+
+calculateFit(): esta função calcula as acomodações. Ela obtém os valores dos campos de entrada #length, #width, #height e #capacity, que representam as dimensões e a 
+capacidade de acomodação. Em seguida, calcula o volume total disponível e o volume ocupado, somando volumes aleatórios para cada entrega. O volume restante é calculado 
+subtraindo o volume ocupado da capacidade total. Os resultados são exibidos em um elemento <div> com o ID result-container.
+
+findBestPath(): esta função encontra o melhor caminho no grafo. Ela percorre a tabela de caminhos, obtém o valor de cada célula de entrada numérica e encontra o menor 
+peso. O melhor caminho é armazenado na variável bestPath no formato "linha-coluna" e seu peso é armazenado na variável bestWeight. O resultado é exibido em 
+um elemento <div> com o ID result-container.
+
+findBestFit(): esta função encontra a melhor acomodação. Ela obtém os valores dos campos de entrada #length, #width, #height e #capacity, que representam 
+as dimensões e a capacidade de acomodação. Em seguida, calcula o volume total disponível e encontra a entrega com o menor volume restante após acomodação aleatória. 
+A entrega é armazenada na variável bestFitIndex e o volume restante é armazenado na variável bestFitRemainingVolume. 
+O resultado é exibido em um elemento <div> com o ID result-container.
