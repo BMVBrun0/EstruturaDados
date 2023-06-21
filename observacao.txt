@@ -1,0 +1,1 @@
+Eu uso o 'Live Server' para rodar, mas acho que dá pra usar qualquer forma de localhost.
