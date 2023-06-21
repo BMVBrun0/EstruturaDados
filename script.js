@@ -1,24 +1,22 @@
 $(document).ready(function() {
-  // Variáveis para armazenar informações
   var adjacencyMatrix = [];
   var deliveries = [];
   var bestPath = null;
   var bestFit = null;
 
-  //Pega o número de nós e chama a função do grafo
+  //Pega o número de nós
   $('#create-graph-btn').click(function() {
     var nodeCount = parseInt($('#node-count').val());
     createGraph(nodeCount);
   });
 
-  //Pega o destino e o Item e dps chama a função de add entrega
+  //Pega o destino e o Item
   $('#add-delivery-btn').click(function() {
     var destination = $('#destination').val();
     var item = $('#item').val();
     addDelivery(destination, item);
   });
 
-    //Chama as funções para calcular caminhos, acomodações e encontrar o melhor caminho e melhor acomodação
   $('#calculate-btn').click(function() {
     calculatePaths();
     calculateFit();
@@ -56,7 +54,6 @@ $(document).ready(function() {
 
     $('#deliveries-table tbody').append(row);
 
-    //Armazena a entrega no array de entregas
     deliveries.push({
       destination: destination,
       item: item

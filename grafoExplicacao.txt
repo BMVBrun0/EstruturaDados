@@ -1,4 +1,0 @@
-Um grafo ponderado é um grafo onde as arestas possuem pesos associados, representando medidas como distância, custo ou tempo. 
-A matriz de adjacência de um grafo ponderado é uma tabela quadrada onde os elementos indicam os pesos das arestas entre os vértices.
-Essa matriz facilita a consulta dos pesos, mas pode ocupar muito espaço.
-Existem outras representações mais eficientes dependendo do contexto e dos algoritmos usados.
